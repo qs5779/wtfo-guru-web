@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "ssws"
-version = "0.1.2-dev0"
-description = "Simple static web starter project using fastapi."
+name = "wtfo-guru-web"
+version = "1.0.0-dev0"
+description = "Simple static web project using fastapi."
 authors = ["Quien Sabe <qs5579@mail.com>"]
 license = "MIT"
 readme = "README.md"
