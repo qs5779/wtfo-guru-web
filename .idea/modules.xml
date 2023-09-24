@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fastapi-web-starter.iml" filepath="$PROJECT_DIR$/.idea/fastapi-web-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/wtfo-guru-web.iml" filepath="$PROJECT_DIR$/.idea/wtfo-guru-web.iml" />
     </modules>
   </component>
 </project>
