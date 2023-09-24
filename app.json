@@ -5,8 +5,9 @@
           "type":        "startup",
           "name":        "web check",
           "description": "Checking if the app responds to the /page/health endpoint",
-          "path":        "page/health",
+          "path":        "/page/health",
           "attempts": 5
       }
     ]
-},
+  }
+}
