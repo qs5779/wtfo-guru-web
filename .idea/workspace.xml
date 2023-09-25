@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a927b04-ea0d-40d9-9849-b23f1dc82afa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.pre-commit-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/library/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/library/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/include/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/include/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/topnav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +36,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop-202309231427&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop-202309241605&quot;,
     &quot;last_opened_file_path&quot;: &quot;/data/jim/development/ansible/wtfplaybooks/files/users/data/share/bin&quot;
   }
 }</component>
