@@ -13,13 +13,15 @@ def openfile(filename: str) -> dict[str, str]:
     with open(filepath, "r", encoding="utf-8") as input_file:
         text = input_file.read()
 
-    mt = datetime.fromtimestamp(filepath.stat().st_mtime).strftime("%m/%d/%Y %H:%M:%S")
-    title = filepath.name.replace(".md", "").capitalize()
-    html = markdown.markdown(text, extensions=["fenced_code"])
-    match = re.match(r"([^(]+)", sys.version)
+    fruit = {"text": markdown.markdown(text, extensions=["fenced_code"])}
+    fruit["title"] = filepath.name.replace(".md", "").capitalize()
+    fruit["updated"] = datetime.fromtimestamp(filepath.stat().st_mtime).strftime(
+        "%m/%d/%Y %H:%M:%S",
+    )
+    match = re.match("([^(]+)", sys.version)
     if match:
-        version = match[1].strip()
+        fruit["version"] = match[1].strip()
     else:
-        version = "unknown"
+        fruit["version"] = "unknown"
     logger.debug("retruning data for: {0}".format(str(filepath)))
-    return {"text": html, "title": title, "version": version, "updated": mt}
+    return fruit
