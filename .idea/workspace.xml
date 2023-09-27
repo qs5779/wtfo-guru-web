@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0a927b04-ea0d-40d9-9849-b23f1dc82afa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/library/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/library/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/include/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/home.md" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/home.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mystyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/gradient-dark-blue-futuristic-digital-background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/banner-background.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/include/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/topnav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
