@@ -1,0 +1,7 @@
+.nav-background {
+    background-image: url("/static/images/navigation.jpg");
+    background-size: cover;
+
+    /* Workaround for some mobile browsers */
+    min-height: 141px;
+}

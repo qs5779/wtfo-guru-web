@@ -1,27 +1,29 @@
 {% extends "base.html" %}
 
-{% block title %}FastAPI Starter{% endblock %}
+{% block title %}{{data.title|safe}}{% endblock %}
 {% block head %}
 {{ super() }}
 
 {% endblock %}
 
 {% block page_content %}
-{% include 'include/sidebar.html' %}
-<main role="main" class="container">
-    <div class="row">
-        <div class="col">
-            {{data.text|safe}}
-        </div>
-    </div>
-</main><!-- /.container -->
-
-{{data.page}}
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    {% include 'include/header.html' %}
+    <br /><br /><br /><br /><br />
+    <!-- <div class="row">
+      <div class="col"> -->
+          {{data.text|safe}}
+      <!-- </div>
+    </div> -->
+    {% include 'include/footer.html' %}
+  </div>
+</main>
 
 {% endblock %}
 
 {% block scripts %}
 {{ super() }}
-
 
 {% endblock %}
