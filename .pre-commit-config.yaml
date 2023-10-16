@@ -1,4 +1,4 @@
-exclude: '^docs/conf.py'
+exclude: '^docs/conf.py|.*.iml'
 default_install_hook_types: ["pre-commit", "commit-msg"]
 default_stages: ["commit"]
 
