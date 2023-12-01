@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wtfo-guru-web"
-version = "1.0.2-dev4"
+version = "1.0.2-dev5"
 description = "Simple static web project using fastapi."
 authors = ["Quien Sabe <qs5579@mail.com>"]
 license = "MIT"
