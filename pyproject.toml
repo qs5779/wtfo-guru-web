@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wtfo-guru-web"
-version = "1.0.2-dev4"
+version = "1.0.2-dev6"
 description = "Simple static web project using fastapi."
 authors = ["Quien Sabe <qs5579@mail.com>"]
 license = "MIT"
@@ -10,8 +10,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 requests = "^2.31.0"
-fastapi = "^0.104.0"
-uvicorn = "^0.24.0"
+fastapi = "^0.108"
+uvicorn = "^0.25"
 python-dotenv = "^1.0.0"
 aiofiles = "^23.2.1"
 python-multipart = "^0.0.6"
@@ -23,18 +23,18 @@ loguru = "^0.7.2"
 optional = true
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.4.2"
+pytest = "^7.4"
 pytest-cov = "^4.1.0"
 flake8 = "^6.1.0"
-black = "^23.11.0"
-isort = "^5.12.0"
-mypy = "^1.7.1"
+black = "^23.12"
+isort = "^5.13"
+mypy = "^1.8"
 types-markdown = "^3.5.0.3"
 safety = "^2.4.0b2"
 wemake-python-styleguide = "^0.18.0"
 flake8-pytest-style = "^1.7.2"
 doc8 = "^1.1.1"
-httpx = "^0.25.2"
+httpx = "^0.26"
 
 [build-system]
 requires = ["poetry-core"]
