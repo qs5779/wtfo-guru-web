@@ -10,7 +10,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 requests = "^2.31.0"
-fastapi = "^0.108"
+fastapi = "^0.109"
 uvicorn = "^0.27"
 python-dotenv = "^1.0.0"
 aiofiles = "^23.2.1"
