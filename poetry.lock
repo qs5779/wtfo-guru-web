@@ -1779,13 +1779,13 @@ test = ["black (>=22.3.0,<23.0.0)", "coverage (>=6.2,<7.0)", "isort (>=5.0.6,<6.
 
 [[package]]
 name = "types-markdown"
-version = "3.5.0.3"
+version = "3.5.0.20240129"
 description = "Typing stubs for Markdown"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "types-Markdown-3.5.0.3.tar.gz", hash = "sha256:9afd38a8f53e19d43de3f8d89742b3674b5736767806ed9356d64ccb09f76439"},
-    {file = "types_Markdown-3.5.0.3-py3-none-any.whl", hash = "sha256:2299b9086c695f408a3ebabf820f1fba3b239f1b3bfdbb32bf42d530b42cdd83"},
+    {file = "types-Markdown-3.5.0.20240129.tar.gz", hash = "sha256:9acd36fef264d9ed5a96345c45f7d80f0d967059e92213998b3046fbb64f67fc"},
+    {file = "types_Markdown-3.5.0.20240129-py3-none-any.whl", hash = "sha256:d6861d9d68e8268a5346d8a43d14727e6c636ebc6d49f2b8fc034c25996d35dd"},
 ]
 
 [[package]]
@@ -1884,4 +1884,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "d098455150bc26018b91c1e3bb2c50843a26b0906ce7605e7c5535ca7fbcc1f6"
+content-hash = "542974540d65d165ef356afc211c17287eb80b2deff6fa2ba31c99f6b2ff4a6f"
