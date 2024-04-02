@@ -3,9 +3,12 @@ SHELL:=/usr/bin/env bash
 PROJECT ?= $(shell git rev-parse --show-toplevel)
 PROJECT_VERSION ?= $(shell grep ^current_version .bumpversion.cfg | awk '{print $$NF'} | tr '-' '.')
 
-.PHONY: chlog black mypy lint sunit unit package test build vars
+.PHONY: chlog black mypy lint sunit unit package test build vars update
 vars:
 	echo "PROJECT_VERSION: $(PROJECT_VERSION)"
+
+update:
+	poetry update --with test
 
 black:
 	poetry run isort app tests
