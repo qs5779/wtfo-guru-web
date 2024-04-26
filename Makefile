@@ -1,46 +1,64 @@
 SHELL:=/usr/bin/env bash
 
-PROJECT ?= $(shell git rev-parse --show-toplevel)
+PROJECT_NAME ?= $(shell basename $$(git rev-parse --show-toplevel) | sed -e "s/^python-//")
+PACKAGE_DIR ?= app
 PROJECT_VERSION ?= $(shell grep ^current_version .bumpversion.cfg | awk '{print $$NF'} | tr '-' '.')
+TEST_MASK = tests/*.py
+TEST_DIR = tests
 
-.PHONY: chlog black mypy lint sunit unit package test build vars update
+.PHONY: vars
 vars:
-	echo "PROJECT_VERSION: $(PROJECT_VERSION)"
+	@echo "PROJECT_NAME: $(PROJECT_NAME)"
+	@echo "PACKAGE_DIR: $(PACKAGE_DIR)"
+	@echo "PROJECT_VERSION: $(PROJECT_VERSION)"
 
+.PHONY: update
 update:
-	poetry update --with test
+	poetry update --with test --with docs
+	poetry export -f requirements.txt --without=test --without=docs -o requirements.txt --without-hashes
+	poetry export -f requirements.txt --only=test --only=docs -o requirements_dev.txt --without-hashes
 
+.PHONY: black
 black:
-	poetry run isort app tests
-	poetry run black app tests
+	poetry run isort main.py $(PACKAGE_DIR) $(TEST_MASK)
+	poetry run black main.py $(PACKAGE_DIR) $(TEST_MASK)
 
+.PHONY: mypy
 mypy: black
-	poetry run mypy app tests/*.py
+	poetry run mypy main.py $(PACKAGE_DIR) $(TEST_MASK)
 
+.PHONY: lint
 lint: mypy
-	poetry run flake8 app tests
-	#poetry run doc8 -q docs
+	poetry run flake8 main.py $(PACKAGE_DIR) $(TEST_MASK)
+	# poetry run doc8 -q docs
 
-sunit:
-	poetry run pytest -s tests
-
-unit:
-	poetry run pytest tests
-
+.PHONY: package
 package:
 	poetry check
 	poetry run pip check
 	poetry run safety check --full-report
 
-test: lint package unit reqs
+.PHONY: sunit
+sunit:
+	poetry run pytest -s tests
 
+.PHONY: unit
+unit:
+	poetry run pytest tests
+
+.PHONY: test
+test: lint package unit
+
+.PHONY: deploy-cloud
+deploy-cloud:
+	git push guvdokku main:main
+
+.PHONY: deploy
 deploy:
+	manage-tag.sh -u v$(PROJECT_VERSION)
 	git push dokku main:main
 
-reqs:
-	poetry export -f requirements.txt --without=test -o requirements.txt --without-hashes
-	poetry export -f requirements.txt --only=test -o requirements_dev.txt --without-hashes
-
+.PHONY: chlog
 chlog:
 	github_changelog_generator -u qs5779 -p fastapi-web-starter
 	sed -i -e '/^$$/N;/^\n$$/D' ./CHANGELOG.md

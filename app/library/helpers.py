@@ -23,5 +23,5 @@ def openfile(filename: str) -> dict[str, str]:
         fruit["version"] = match[1].strip()
     else:
         fruit["version"] = "unknown"
-    logger.debug("retruning data for: {0}".format(str(filepath)))
+    logger.debug("returning data for: {0}".format(str(filepath)))
     return fruit
