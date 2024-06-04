@@ -4,7 +4,7 @@ PROJECT_NAME ?= $(shell basename $$(git rev-parse --show-toplevel) | sed -e "s/^
 PACKAGE_DIR = app
 PROJECT_VERSION ?= $(shell grep ^current_version .bumpversion.cfg | awk '{print $$NF'} | tr '-' '.')
 TEST_DIR = tests
-TEST_MASK = $(TEST_DIR)/**/*.py
+TEST_MASK = $(TEST_DIR)/*.py
 
 .PHONY: vars
 vars:
