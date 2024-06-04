@@ -1,10 +1,10 @@
 SHELL:=/usr/bin/env bash
 
 PROJECT_NAME ?= $(shell basename $$(git rev-parse --show-toplevel) | sed -e "s/^python-//")
-PACKAGE_DIR ?= app
+PACKAGE_DIR = app
 PROJECT_VERSION ?= $(shell grep ^current_version .bumpversion.cfg | awk '{print $$NF'} | tr '-' '.')
-TEST_MASK = tests/*.py
 TEST_DIR = tests
+TEST_MASK = $(TEST_DIR)/*.py
 
 .PHONY: vars
 vars:
@@ -38,13 +38,17 @@ package:
 	poetry run pip check
 	poetry run safety check --full-report
 
+.PHONY: safety
+safety:
+	poetry run safety check --full-report
+
 .PHONY: sunit
 sunit:
-	poetry run pytest -s tests
+	poetry run pytest -s $(TEST_DIR)
 
 .PHONY: unit
 unit:
-	poetry run pytest tests
+	poetry run pytest $(TEST_DIR)
 
 .PHONY: test
 test: lint package unit
@@ -93,3 +97,5 @@ clean-test: ## remove test and coverage artifacts
 
 .DEFAULT:
 	@cd docs && $(MAKE) $@
+
+# vim: ft=Makefile
