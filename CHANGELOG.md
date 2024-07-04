@@ -8,10 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.3-dev0] - 2024-07-04
+## [1.0.3-dev1] - 2024-07-04
 
 ### Changed
 
+- Updated aiofiles (23.2.1 -> 24.1.0)
 - Updated typing-extensions (4.12.1 -> 4.12.2)
 - Updated certifi (2024.6.2 -> 2024.7.4)
 - Updated pydantic-core (2.18.4 -> 2.20.1)
