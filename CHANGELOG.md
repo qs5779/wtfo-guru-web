@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3-dev2] - 2024-08-01
+
+### Changed
+
+- Updated uvicorn (0.30.1 -> 0.30.4)
+- Updated fastapi (0.111.0 -> 0.111.1)
+
 ## [1.0.3-dev1] - 2024-07-04
 
 ### Changed
