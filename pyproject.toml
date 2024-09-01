@@ -23,7 +23,7 @@ loguru = "^0.7.2"
 optional = true
 
 [tool.poetry.group.test.dependencies]
-mypy = "^1.9"
+mypy = "^1.11"
 wemake-python-styleguide = "^0.19"
 safety = ">=2.3,<4.0"
 pytest = ">=7.4,<9.0"
