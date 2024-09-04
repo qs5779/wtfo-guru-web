@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wtfo-guru-web"
-version = "1.0.3-dev2"
+version = "1.0.3-dev3"
 description = "Simple static web project using fastapi."
 authors = ["Quien Sabe <qs5579@mail.com>"]
 license = "MIT"
@@ -10,7 +10,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 requests = "^2.31.0"
-fastapi = "^0.111.0"
+fastapi = "^0.112.0"
 uvicorn = "^0.30.0"
 python-dotenv = "^1.0.1"
 aiofiles = "^24.1.0"
