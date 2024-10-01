@@ -25,8 +25,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated pydantic-core (2.18.4 -> 2.20.1)
 - Updated email-validator (2.1.1 -> 2.2.0)
 - Updated orjson (3.10.3 -> 3.10.6)
-- Updated pydantic (2.7.3 -> 2.8.2)
+- Updated pydantic (2.7.3 -> 2.9.2)
 - Updated urllib3 (2.2.1 -> 2.2.2)
+- Updating fastapi (0.112.4 -> 0.115.0)
+- Updating python-multipart (0.0.9 -> 0.0.12)
+- Updating uvicorn (0.30.6 -> 0.31.0)
 
 ### Fixed
 
