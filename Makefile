@@ -17,9 +17,7 @@ update:
 	poetry update --with test --with docs
 	poetry export -f requirements.txt --without=test --without=docs -o requirements.txt --without-hashes
 	poetry export -f requirements.txt --only=test --only=docs -o requirements_dev.txt --without-hashes
-	pre-commit autoupdate
-	git add --update
-	pre-commit run
+	pre-commit-update-repo.sh
 
 
 .PHONY: black
@@ -40,11 +38,10 @@ lint: mypy
 package:
 	poetry check
 	poetry run pip check
-	poetry run safety check --full-report
 
 .PHONY: safety
 safety:
-	poetry run safety check --full-report
+	poetry run safety scan --full-report
 
 .PHONY: sunit
 sunit:
@@ -55,7 +52,10 @@ unit:
 	poetry run pytest $(TEST_DIR)
 
 .PHONY: test
-test: lint package unit
+test: safety lint package unit
+
+.PHONY: ghtest
+ghtest: lint package unit
 
 .PHONY: deploy-cloud
 deploy-cloud:

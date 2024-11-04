@@ -50,8 +50,13 @@ jobs:
     - name: Install dependencies
       run: poetry install --no-interaction --no-root --with=test
 
+    - name: Safety Scan
+      uses: pyupio/safety-action@v1
+      with:
+        api-key: ${{ secrets.SAFETY_API_KEY }}
+
     - name: Run checks
-      run: make test
+      run: make ghtest
 
     # Upload coverage to codecov: https://codecov.io/
     - name: Upload coverage to Codecov
