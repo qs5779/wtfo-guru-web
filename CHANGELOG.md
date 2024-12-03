@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3-dev5] - 2024-12-03
+
+- Updating fastapi (0.115.4 -> 0.115.5)
+- Updating httpx (0.27.2 -> 0.28.0)
+- Updating tomli (2.0.2 -> 2.2.1)
+- Updating python-multipart (0.0.12 -> 0.0.18)
+- Updating uvicorn (0.31.1 -> 0.32.1)
+
 ## [1.0.3-dev2] - 2024-08-01
 
 ### Changed

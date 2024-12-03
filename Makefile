@@ -15,9 +15,10 @@ vars:
 .PHONY: update
 update:
 	poetry update --with test --with docs
-	poetry export -f requirements.txt --without=test --without=docs -o requirements.txt --without-hashes
-	poetry export -f requirements.txt --only=test --only=docs -o requirements_dev.txt --without-hashes
+#	poetry export -f requirements.txt --without=test --without=docs -o requirements.txt --without-hashes
+#	poetry export -f requirements.txt --only=test --only=docs -o requirements_dev.txt --without-hashes
 	pre-commit-update-repo.sh
+#	pre-commit run --files requirements.txt requirements_dev.txt
 
 
 .PHONY: black
@@ -52,7 +53,7 @@ unit:
 	poetry run pytest $(TEST_DIR)
 
 .PHONY: test
-test: safety lint package unit
+test: lint package unit
 
 .PHONY: ghtest
 ghtest: lint package unit

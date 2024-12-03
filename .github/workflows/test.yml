@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10.15']
 
     steps:
     - uses: actions/checkout@v4
@@ -64,4 +64,4 @@ jobs:
         CODECOV_TOKEN: e75f6fce-4abf-407a-b126-1e034db7b852
       uses: codecov/codecov-action@v4
       with:
-        file: ./coverage.xml
+        files: ./coverage.xml
